@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 작성폼</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .layout {
+            width: 500px;
+            margin: 40px auto 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px 25px;
+            border-radius:20px;
+        }
+
+        .layout input,
+        .layout textarea,
+        .layout button {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #e1e1e1;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        . input {
+            margin-bottom: 20px;
+        }
+
+        .layout textarea {
+            margin-top: 10px;
+            min-height: 300px;
+            resize: vertical;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+
+        a.back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #007BFF;
+            background-color: #fff;
+            padding: 8px 15px;
+            border-radius: 15px;
+            border: 2px solid #007BFF;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a.back-btn:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<a href="/board/list" class="back-btn">뒤로가기</a>
+<div class="layout">
+    <form action="/board/write" method="post">
+        <input type="text" name="title" placeholder="제목을 입력해주세요...">
+        <textarea name="content" placeholder="내용을 입력해주세요..."></textarea>
+        <button type="submit">게시물 작성하기</button>
+    </form>
+</div>
+</body>
+</html>

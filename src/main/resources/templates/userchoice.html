@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a th:href="@{/choice/{state}(state=${'user'})}">user</a>
+    <a th:href="@{/choice/{state}(state=${'admin'})}">admin</a>
+    <a th:href="@{/choice/{state}(state=${'root'})}">root</a>
+
+</body>
+</html>
