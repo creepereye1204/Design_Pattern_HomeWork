@@ -135,7 +135,7 @@ public class boardWrite {
     }
 
     @GetMapping("/board/delete") // This maps the HTTP GET request to the root ("/") to this method
-    public String boardView(Board board,Model model,HttpSession session,HttpServletRequest request) throws NoSuchAlgorithmException {
+    public String boardDelete(Board board,Model model,HttpSession session,HttpServletRequest request) throws NoSuchAlgorithmException {
         switchState(request.getRemoteAddr().toString());
         if(session.getAttribute("state")!=null) {
             boardService.setAction(new Delete());
@@ -177,7 +177,7 @@ public class boardWrite {
     }
 
     @GetMapping("/write")
-    public String com(HttpSession session){
+    public String write(HttpSession session){
         if(session.getAttribute("state")!=null){
             return "boardwrite";
         }
